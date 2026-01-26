@@ -57,7 +57,7 @@ importers:
         specifier: 2.9.1
         version: 2.9.1
       '@tauri-apps/plugin-barcode-scanner':
-        specifier: ^2.4.3
+        specifier: ^2.4.4
         version: link:../../plugins/barcode-scanner
       '@tauri-apps/plugin-biometric':
         specifier: ^2.3.2
@@ -84,7 +84,7 @@ importers:
         specifier: ^2.2.0
         version: link:../../plugins/haptics
       '@tauri-apps/plugin-http':
-        specifier: ^2.5.6
+        specifier: ^2.5.7
         version: link:../../plugins/http
       '@tauri-apps/plugin-nfc':
         specifier: ^2.3.4
@@ -102,13 +102,13 @@ importers:
         specifier: ^2.3.1
         version: link:../../plugins/process
       '@tauri-apps/plugin-shell':
-        specifier: ^2.3.4
+        specifier: ^2.3.5
         version: link:../../plugins/shell
       '@tauri-apps/plugin-store':
         specifier: ^2.4.2
         version: link:../../plugins/store
       '@tauri-apps/plugin-updater':
-        specifier: ^2.9.0
+        specifier: ^2.10.0
         version: link:../../plugins/updater
       '@tauri-apps/plugin-upload':
         specifier: ^2.3.0
@@ -793,66 +793,79 @@ packages:
     resolution: {integrity: sha512-Rn3n+FUk2J5VWx+ywrG/HGPTD9jXNbicRtTM11e/uorplArnXZYsVifnPPqNNP5BsO3roI4n8332ukpY/zN7rQ==}
     cpu: [arm]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-arm-musleabihf@4.55.1':
     resolution: {integrity: sha512-grPNWydeKtc1aEdrJDWk4opD7nFtQbMmV7769hiAaYyUKCT1faPRm2av8CX1YJsZ4TLAZcg9gTR1KvEzoLjXkg==}
     cpu: [arm]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-arm64-gnu@4.55.1':
     resolution: {integrity: sha512-a59mwd1k6x8tXKcUxSyISiquLwB5pX+fJW9TkWU46lCqD/GRDe9uDN31jrMmVP3feI3mhAdvcCClhV8V5MhJFQ==}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-arm64-musl@4.55.1':
     resolution: {integrity: sha512-puS1MEgWX5GsHSoiAsF0TYrpomdvkaXm0CofIMG5uVkP6IBV+ZO9xhC5YEN49nsgYo1DuuMquF9+7EDBVYu4uA==}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-loong64-gnu@4.55.1':
     resolution: {integrity: sha512-r3Wv40in+lTsULSb6nnoudVbARdOwb2u5fpeoOAZjFLznp6tDU8kd+GTHmJoqZ9lt6/Sys33KdIHUaQihFcu7g==}
     cpu: [loong64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-loong64-musl@4.55.1':
     resolution: {integrity: sha512-MR8c0+UxAlB22Fq4R+aQSPBayvYa3+9DrwG/i1TKQXFYEaoW3B5b/rkSRIypcZDdWjWnpcvxbNaAJDcSbJU3Lw==}
     cpu: [loong64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-ppc64-gnu@4.55.1':
     resolution: {integrity: sha512-3KhoECe1BRlSYpMTeVrD4sh2Pw2xgt4jzNSZIIPLFEsnQn9gAnZagW9+VqDqAHgm1Xc77LzJOo2LdigS5qZ+gw==}
     cpu: [ppc64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-ppc64-musl@4.55.1':
     resolution: {integrity: sha512-ziR1OuZx0vdYZZ30vueNZTg73alF59DicYrPViG0NEgDVN8/Jl87zkAPu4u6VjZST2llgEUjaiNl9JM6HH1Vdw==}
     cpu: [ppc64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-riscv64-gnu@4.55.1':
     resolution: {integrity: sha512-uW0Y12ih2XJRERZ4jAfKamTyIHVMPQnTZcQjme2HMVDAHY4amf5u414OqNYC+x+LzRdRcnIG1YodLrrtA8xsxw==}
     cpu: [riscv64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-riscv64-musl@4.55.1':
     resolution: {integrity: sha512-u9yZ0jUkOED1BFrqu3BwMQoixvGHGZ+JhJNkNKY/hyoEgOwlqKb62qu+7UjbPSHYjiVy8kKJHvXKv5coH4wDeg==}
     cpu: [riscv64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-linux-s390x-gnu@4.55.1':
     resolution: {integrity: sha512-/0PenBCmqM4ZUd0190j7J0UsQ/1nsi735iPRakO8iPciE7BQ495Y6msPzaOmvx0/pn+eJVVlZrNrSh4WSYLxNg==}
     cpu: [s390x]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-x64-gnu@4.55.1':
     resolution: {integrity: sha512-a8G4wiQxQG2BAvo+gU6XrReRRqj+pLS2NGXKm8io19goR+K8lw269eTrPkSdDTALwMmJp4th2Uh0D8J9bEV1vg==}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@rollup/rollup-linux-x64-musl@4.55.1':
     resolution: {integrity: sha512-bD+zjpFrMpP/hqkfEcnjXWHMw5BIghGisOKPj+2NaNDuVT+8Ds4mPf3XcPHuat1tz89WRL+1wbcxKY3WSbiT7w==}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   '@rollup/rollup-openbsd-x64@4.55.1':
     resolution: {integrity: sha512-eLXw0dOiqE4QmvikfQ6yjgkg/xDM+MdU9YJuP4ySTibXU0oAvnEWXt7UDJmD4UkYialMfOGFPJnIHSe/kdzPxg==}
@@ -930,30 +943,35 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [glibc]
 
   '@tauri-apps/cli-linux-arm64-musl@2.9.6':
     resolution: {integrity: sha512-02TKUndpodXBCR0oP//6dZWGYcc22Upf2eP27NvC6z0DIqvkBBFziQUcvi2n6SrwTRL0yGgQjkm9K5NIn8s6jw==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
+    libc: [musl]
 
   '@tauri-apps/cli-linux-riscv64-gnu@2.9.6':
     resolution: {integrity: sha512-fmp1hnulbqzl1GkXl4aTX9fV+ubHw2LqlLH1PE3BxZ11EQk+l/TmiEongjnxF0ie4kV8DQfDNJ1KGiIdWe1GvQ==}
     engines: {node: '>= 10'}
     cpu: [riscv64]
     os: [linux]
+    libc: [glibc]
 
   '@tauri-apps/cli-linux-x64-gnu@2.9.6':
     resolution: {integrity: sha512-vY0le8ad2KaV1PJr+jCd8fUF9VOjwwQP/uBuTJvhvKTloEwxYA/kAjKK9OpIslGA9m/zcnSo74czI6bBrm2sYA==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [glibc]
 
   '@tauri-apps/cli-linux-x64-musl@2.9.6':
     resolution: {integrity: sha512-TOEuB8YCFZTWVDzsO2yW0+zGcoMiPPwcUgdnW1ODnmgfwccpnihDRoks+ABT1e3fHb1ol8QQWsHSCovb3o2ENQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
+    libc: [musl]
 
   '@tauri-apps/cli-win32-arm64-msvc@2.9.6':
     resolution: {integrity: sha512-ujmDGMRc4qRLAnj8nNG26Rlz9klJ0I0jmZs2BPpmNNf0gM/rcVHhqbEkAaHPTBVIrtUdf7bGvQAD2pyIiUrBHQ==}
@@ -2368,9 +2386,9 @@ snapshots:
       - encoding
       - mocha
 
-  '@covector/assemble@0.12.0':
+  '@covector/assemble@0.12.0(mocha@10.8.2)':
     dependencies:
-      '@covector/command': 0.8.0
+      '@covector/command': 0.8.0(mocha@10.8.2)
       '@covector/files': 0.8.0
       effection: 2.0.8(mocha@10.8.2)
       js-yaml: 4.1.1
@@ -2381,9 +2399,10 @@ snapshots:
       unified: 9.2.2
     transitivePeerDependencies:
       - encoding
+      - mocha
       - supports-color
 
-  '@covector/changelog@0.12.0':
+  '@covector/changelog@0.12.0(mocha@10.8.2)':
     dependencies:
       '@covector/files': 0.8.0
       effection: 2.0.8(mocha@10.8.2)
@@ -2393,14 +2412,16 @@ snapshots:
       unified: 9.2.2
     transitivePeerDependencies:
       - encoding
+      - mocha
       - supports-color
 
-  '@covector/command@0.8.0':
+  '@covector/command@0.8.0(mocha@10.8.2)':
     dependencies:
-      '@effection/process': 2.1.4
+      '@effection/process': 2.1.4(mocha@10.8.2)
       effection: 2.0.8(mocha@10.8.2)
     transitivePeerDependencies:
       - encoding
+      - mocha
 
   '@covector/files@0.8.0':
     dependencies:
@@ -2447,10 +2468,8 @@ snapshots:
     dependencies:
       effection: 2.0.8(mocha@10.8.2)
       mocha: 10.8.2
-    transitivePeerDependencies:
-      - encoding
 
-  '@effection/process@2.1.4':
+  '@effection/process@2.1.4(mocha@10.8.2)':
     dependencies:
       cross-spawn: 7.0.6
       ctrlc-windows: 2.2.0
@@ -2458,6 +2477,7 @@ snapshots:
       shellwords: 0.1.1
     transitivePeerDependencies:
       - encoding
+      - mocha
 
   '@effection/stream@2.0.6':
     dependencies:
@@ -3305,9 +3325,9 @@ snapshots:
     dependencies:
       '@clack/prompts': 0.7.0
       '@covector/apply': 0.10.0(mocha@10.8.2)
-      '@covector/assemble': 0.12.0
-      '@covector/changelog': 0.12.0
-      '@covector/command': 0.8.0
+      '@covector/assemble': 0.12.0(mocha@10.8.2)
+      '@covector/changelog': 0.12.0(mocha@10.8.2)
+      '@covector/command': 0.8.0(mocha@10.8.2)
       '@covector/files': 0.8.0
       effection: 2.0.8(mocha@10.8.2)
       globby: 11.1.0
