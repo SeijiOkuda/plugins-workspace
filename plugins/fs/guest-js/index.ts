@@ -74,6 +74,7 @@
 
 import { BaseDirectory } from '@tauri-apps/api/path'
 import { Channel, invoke, Resource } from '@tauri-apps/api/core'
+import iconv from 'iconv-lite'
 
 enum SeekMode {
   Start = 0,
@@ -1056,6 +1057,8 @@ interface WriteFileOptions {
   mode?: number
   /** Base directory for `path` */
   baseDir?: BaseDirectory
+  /** Text encoding to use when writing a text file. Defaults to 'utf-8'. */
+  encoding?: string
 }
 
 /**
@@ -1129,9 +1132,17 @@ async function writeTextFile(
     throw new TypeError('Must be a file URL.')
   }
 
-  const encoder = new TextEncoder()
+  const encoding = options?.encoding ?? 'utf-8';
+  let bytes: Uint8Array;
 
-  await invoke('plugin:fs|write_text_file', encoder.encode(data), {
+  if (encoding.toLowerCase() === 'utf-8' || encoding.toLowerCase() === 'utf8') {
+    bytes = new TextEncoder().encode(data);
+  } else {
+    const buf = iconv.encode(data, encoding);
+    bytes = new Uint8Array(buf);
+  }
+
+  await invoke('plugin:fs|write_text_file', bytes, {
     headers: {
       path: encodeURIComponent(path instanceof URL ? path.toString() : path),
       options: JSON.stringify(options)

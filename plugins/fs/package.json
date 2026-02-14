@@ -25,6 +25,7 @@
     "LICENSE"
   ],
   "dependencies": {
-    "@tauri-apps/api": "^2.10.1"
+    "@tauri-apps/api": "^2.10.1",
+    "iconv-lite": "^0.7.2"
   }
 }
